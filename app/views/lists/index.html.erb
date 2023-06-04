@@ -1,0 +1,33 @@
+<header>
+  <!-- Background image -->
+  <div
+    class="p-5 text-center bg-image"
+    style="
+      background-image: url('app/assets/images/list_background.jpg');
+      height: 400px;
+    "
+  >
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+      <div class="d-flex justify-content-center align-items-center h-100">
+        <div class="text-white">
+          <h1 class="mb-3">Movie Lists</h1>
+          <h4 class="mb-3">Your movie world</h4>
+          <a class="btn btn-outline-light btn-lg" href="#!" role="button"
+          >Call to action</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Background image -->
+</header>
+
+<div class="container mt-5 shadow">
+  <h2>List</h2>
+  <ul>
+    <% @lists.each do |t| %>
+    <li>List name: <%= t.name %></li>
+    <%= link_to "See details", list_path(t), class: "btn btn-primary"%>
+    <% end %>
+  </ul>
+</div>

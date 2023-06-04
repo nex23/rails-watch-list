@@ -1,0 +1,11 @@
+<div class="container mt-5 shadow">
+  <h2>List: <%= @list.name %></h2>
+  <h3>movies:</h3>
+  <ul>
+    <% @list.bookmarks.each do |b| %>
+    <li class="list-group-item"><%= b.movie.title %></li>
+    <li class="list-group-item"><%= b.comment %></li>
+    <p>---------------</p>
+  <% end %>
+  </ul>
+</div>
